@@ -1,0 +1,18 @@
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/base.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css");
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: block;
+  }
+  .desktop-nav {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  #mobile-menu {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+}

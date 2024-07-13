@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>YouTube Video Downloader</title>
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto px-4 mt-8 min-h-screen">
+      <div class="text-center py-10">
+        <h1 class="text-3xl font-bold mb-4">YouTube Video Downloader</h1>
+        <form action="/" method="post" class="max-w-md mx-auto">
+          <input
+            type="text"
+            name="video_url"
+            placeholder="Enter YouTube Video URL"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Download Video
+          </button>
+        </form>
+        {% if error %}
+        <p class="text-red-500 mt-4">{{ error }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
